@@ -80,27 +80,82 @@
             color:white;
             padding:30px;
         }
+
+        @media (max-width: 768px){
+
+    .hero{
+        min-height: auto;
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero .lead{
+        font-size: 1rem;
+    }
+
+    .hero-image{
+        max-width: 300px;
+        margin-top: 30px;
+    }
+
+    .stats-box,
+    .feature-card,
+    .pricing-card{
+        margin-bottom: 20px;
+    }
+
+    .btn-lg{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
     </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100">
+
     <div class="container">
+
         <a class="navbar-brand fw-bold" href="#">
             FinTrack AI
         </a>
 
-        <div>
-            <a href="/login" class="btn btn-dark me-2">
-                Login
-            </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-            <a href="/register" class="btn btn-light">
-                Register
-            </a>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <div class="ms-auto mt-3 mt-lg-0">
+
+                <a href="/login" class="btn btn-dark me-lg-2 mb-2 mb-lg-0">
+                    Login
+                </a>
+
+                <a href="/register" class="btn btn-light me-lg-2 mb-2 mb-lg-0">
+                    Register
+                </a>
+
+            </div>
+
         </div>
+
     </div>
+
 </nav>
 
 <!-- HERO -->
@@ -109,7 +164,7 @@
 
         <div class="row align-items-center">
 
-            <div class="col-md-6">
+            <div class="col-12 col-lg-6 text-center text-lg-start">
 
                 <h1 class="display-4 fw-bold">
                     Kelola Keuangan Lebih Cerdas Dengan AI
@@ -134,7 +189,7 @@
 
             </div>
 
-            <div class="col-md-6 text-center">
+            <div class="col-12 col-lg-6 text-center mt-5 mt-lg-0">
 
                 <img
                     src="{{ asset('images/hero-fintrack.png') }}"
@@ -155,21 +210,21 @@
 
         <div class="row g-4">
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="stats-box">
                     <h2 class="fw-bold">10K+</h2>
                     <p>Pengguna Aktif</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="stats-box">
                     <h2 class="fw-bold">Rp 2 M+</h2>
                     <p>Target Tabungan Tercapai</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="stats-box">
                     <h2 class="fw-bold">95%</h2>
                     <p>Kepuasan Pengguna</p>
@@ -193,7 +248,7 @@
 
         <div class="row g-4">
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card feature-card shadow p-4 h-100">
                     <h4>Dashboard Keuangan</h4>
                     <p>
@@ -203,7 +258,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card feature-card shadow p-4 h-100">
                     <h4>Target Tabungan</h4>
                     <p>
@@ -213,7 +268,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="card feature-card shadow p-4 h-100">
                     <h4>AI Insight</h4>
                     <p>
@@ -240,17 +295,17 @@
 
         <div class="row text-center">
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <h5>Uang Cepat Habis</h5>
                 <p>Tidak tahu kemana pengeluaran pergi.</p>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <h5>Sulit Menabung</h5>
                 <p>Tidak memiliki target dan perencanaan.</p>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <h5>Tidak Ada Analisis</h5>
                 <p>Kesulitan memahami pola keuangan.</p>
             </div>
@@ -272,7 +327,7 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
 
                 <div class="card pricing-card shadow p-4">
 
@@ -294,7 +349,7 @@
 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
 
                 <div class="card pricing-card shadow p-4 border-dark">
 
@@ -362,6 +417,8 @@
     </div>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

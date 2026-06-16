@@ -17,16 +17,22 @@
             font-family:'Segoe UI',sans-serif;
         }
 
+        @media (max-width:576px){
         .register-card{
             width:100%;
-            max-width:450px;
+            max-width:100%;
+            margin:15px;
             border:none;
             border-radius:24px;
             box-shadow:0 20px 40px rgba(0,0,0,.08);
         }
+
+        .card-body{
+        padding:25px 20px !important;
+        }
         
         .logo{
-            font-size:32px;
+            font-size:26px;
             font-weight:700;
             letter-spacing:-1px;
             color:#111111;
@@ -61,6 +67,7 @@
             font-size:14px;
             font-weight:500;
         }
+}
     </style>
 </head>
 <body>
@@ -108,7 +115,7 @@
 
             <div class="row mb-3">
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <label class="mb-1">
                         Password
                     </label>
@@ -119,7 +126,7 @@
                         required>
                 </div>
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <label class="mb-1">
                         Konfirmasi Password
                     </label>

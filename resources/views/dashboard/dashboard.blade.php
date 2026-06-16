@@ -3,17 +3,24 @@
 @push('styles')
 <style>
 
+@media (max-width:768px){
 .balance-card{
     background: linear-gradient( 135deg,#111111,#2d2d2d);
     color:white;
-    padding:30px;
+    padding:20px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
+.balance-card h1{
+        font-size:2rem;
+    }
+
 .card{
     border:none;
     border-radius:15px;
+    margin-bottom:15px;
+}
 }
 
 .progress{
@@ -37,7 +44,7 @@
 
 <div class="row g-4">
 
-    <div class="col-md-4">
+    <div class="col-12 col-md-4">
         <div class="card shadow p-3">
             <h5>Pemasukan</h5>
             <h3 class="text-success">
@@ -46,7 +53,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-12 col-md-4">
         <div class="card shadow p-3">
             <h5>Pengeluaran</h5>
             <h3 class="text-danger">
@@ -55,7 +62,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-12 col-md-4">
         <div class="card shadow p-3">
             <h5>Saldo</h5>
             <h3 class="text-primary">
@@ -68,7 +75,7 @@
 
 <div class="row mt-4 g-4">
 
-    <div class="col-md-6">
+    <div class="col-12 col-md-6">
         <div class="card shadow p-3">
             <h5>Total Target</h5>
             <h2 class="text-primary">
@@ -77,7 +84,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-12 col-md-6">
         <div class="card shadow p-3">
             <h5>Target Tercapai</h5>
             <h2 class="text-success">
@@ -90,30 +97,34 @@
 
 <div class="row mt-4">
 
-    <div class="col-lg-8">
+    <div class="col-12 col-lg-8">
         <div class="card shadow">
             <div class="card-body">
                 <h5>
                     Pengeluaran Bulanan
                 </h5>
 
+                <div style="height:300px">
                 <canvas id="expenseChart"></canvas>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-lg-4">
+    <div class="col-12 col-lg-4">
         <div class="card shadow">
             <div class="card-body">
                 <h5>
                     Kategori Pengeluaran
                 </h5>
 
+                <div style="height:300px">
                 <canvas id="categoryChart"></canvas>
             </div>
         </div>
     </div>
 
+</div>
 </div>
 
 <div class="card shadow mt-4">
@@ -180,6 +191,8 @@
         <h4>
             Transaksi Terbaru
         </h4>
+
+        <div class="table-responsive">
 
         <table class="table table-striped">
 
@@ -252,6 +265,8 @@
 
 </div>
 
+</div>
+
 <div class="card shadow mt-4">
 
     <div class="card-body">
@@ -312,6 +327,7 @@ new Chart(
 
         options:{
             responsive:true,
+            maintainAspectRatio:false
 
             plugins:{
                 legend:{
